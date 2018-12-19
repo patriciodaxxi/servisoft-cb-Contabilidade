@@ -1,0 +1,2 @@
+inherited dmAgendaPessoal: TdmAgendaPessoal
+end

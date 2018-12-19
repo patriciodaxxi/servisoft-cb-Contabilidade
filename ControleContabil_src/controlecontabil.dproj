@@ -1,0 +1,241 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{4E824A02-9373-4A8C-A720-E879DDC47EDB}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>controlecontabil.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DebugDCUs>true</DCC_DebugDCUs>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+			<DCC_DependencyCheckOutputName>..\..\bin\ControleContabil\controlecontabil.exe</DCC_DependencyCheckOutputName>
+			<DCC_ExeOutput>..\..\bin\ControleContabil</DCC_ExeOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DcuOutput>..\..\bin\lib</DCC_DcuOutput>
+			<DCC_UsePackage>vclx;vcl;vclimg;dbrtl;Rave77VCL;bdertl;rtl;vclactnband;vcldb;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;RaizeComponentsVcl;RaizeComponentsVclDb;dclOffice2k;RLibWinD2010;Persiphi;JclDeveloperTools;Jcl;JclVcl;JclContainers;JvCore;JvSystem;JvStdCtrls;JvAppFrm;JvBands;JvDB;JvDlgs;JvBDE;JvControls;JvCmp;JvCrypt;JvCustom;JvDocking;JvDotNetCtrls;JvGlobus;JvHMI;JvJans;JvManagedThreads;JvMM;JvNet;JvPageComps;JvPascalInterpreter;JvPluginSystem;JvPrintPreview;JvRuntimeDesign;JvTimeFramework;JvWizards;JvXPCtrls;dxCoreD14;cxLibraryD14;cxEditorsD14;cxExtEditorsD14;dxBarD14;cxPivotGridD14;cxSchedulerD14;dxmdsD14;dxdbtrD14;dxtrmdD14;dxDockingD14;dxFlowChartD14;cxPageControlD14;dxThemeD14;dxGDIPlusD14;dxComnD14;cxPageControldxBarPopupMenuD14;dxBarDBNavD14;dxBarExtDBItemsD14;dxBarExtItemsD14;dxRibbonD14;cxBarEditItemD14;dxTabbedMDID14;dxLayoutControlD14;dxNavBarD14;dxorgcD14;dxdborD14;cxGridD14;cxPivotGridChartD14;cxPivotGridOLAPD14;cxTreeListD14;cxTreeListdxBarPopupMenuD14;cxSchedulerGridD14;dxsbD14;dxSkinBlackD14;dxSkinsCoreD14;dxSkinBlueD14;dxSkinCaramelD14;dxSkinCoffeeD14;dxSkinDarkRoomD14;dxSkinDarkSideD14;dxSkinFoggyD14;dxSkinGlassOceansD14;dxSkiniMaginaryD14;dxSkinLilianD14;dxSkinLiquidSkyD14;dxSkinLondonLiquidSkyD14;dxSkinMcSkinD14;dxSkinMoneyTwinsD14;dxSkinOffice2007BlackD14;dxSkinOffice2007BlueD14;dxSkinOffice2007GreenD14;dxSkinOffice2007PinkD14;dxSkinOffice2007SilverD14;dxSkinPumpkinD14;dxSkinscxScheduler3PainterD14;dxSkinsdxBarPainterD14;dxSkinsdxDLPainterD14;dxSkinsdxNavBar2PainterD14;dxSkinSevenD14;dxSkinSharpD14;dxSkinSilverD14;dxSkinSpringTimeD14;dxSkinStardustD14;dxSkinSummer2008D14;dxSkinValentineD14;dxSkinXmas2008BlueD14;dcldxSkinsCoreD14;dxSpellCheckerD14;cxSpreadSheetD14;cxVerticalGridD14;dxPScxPCProdD14;dxPSCoreD14;dxPsPrVwAdvD14;dxPSPrVwRibbonD14;dxPSLnksD14;dxPScxCommonD14;dxPScxExtCommonD14;dxPScxGrid6LnkD14;dxPScxPivotGrid2LnkD14;dxPScxScheduler3LnkD14;dxPScxSSLnkD14;dxPScxTL5LnkD14;dxPScxVGridLnkD14;dxPSTeeChartD14;dxPSDBTeeChartD14;dxPSdxOCLnkD14;dxPSdxDBOCLnkD14;dxPSdxDBTVLnkD14;dxPSdxFCLnkD14;dxPSdxLC2LnkD14</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugDCUs>true</DCC_DebugDCUs>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="controlecontabil.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="controlecontabil.dados.pas">
+				<Form>dmDados</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.principal.pas">
+				<Form>frmPrincipal</Form>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.indicadores.pas">
+				<Form>frmIndicadores</Form>
+			</DCCReference>
+			<DCCReference Include="biblioteca.form.base.pas">
+				<Form>frmBase</Form>
+			</DCCReference>
+			<DCCReference Include="biblioteca.datamodule.base.pas">
+				<Form>dmBase</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="biblioteca.datamodule.cadastro.pas">
+				<Form>dmCadBase</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="biblioteca.form.cadastro.pas">
+				<Form>frmCadBase</Form>
+			</DCCReference>
+			<DCCReference Include="cadastro.pessoa.base.pas">
+				<Form>fmPessoaBase</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.pessoa.base.pas">
+				<Form>dmPessoaBase</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="cadastro.pessoa.escritorio.pas">
+				<Form>frmCadEscritorio</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.pessoa.escritorio.pas">
+				<Form>dmCadEscritorio</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="biblioteca.helper.validator.pas"/>
+			<DCCReference Include="biblioteca.helper.validator.tela.pas">
+				<Form>frmHelperValidatorTela</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.pessoa.funcionario.pas">
+				<Form>dmCadFuncionario</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="cadastro.pessoa.funcionario.pas">
+				<Form>frmCadFuncionario</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.pessoa.cliente.pas">
+				<Form>dmCadCliente</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="cadastro.pessoa.cliente.pas">
+				<Form>frmCadCliente</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.recados.pas">
+				<Form>dmRecados</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.recados.pas">
+				<Form>frmRecado</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.indicadores.pas">
+				<Form>dmIndicadores</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.compromissos.pas">
+				<Form>frmCompromissos</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.compromissos.pas">
+				<Form>dmCompromissos</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.agenda.base.pas">
+				<Form>frmAgendaBase</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.agenda.base.pas">
+				<Form>dmAgendaBase</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="datamodule.agenda.corporativa.pas">
+				<Form>dmAgendaCorporativa</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.agenda.corporativa.pas">
+				<Form>frmAgendaCorporativa</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.agenda.pessoal.pas">
+				<Form>dmAgendaPessoal</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.agenda.pessoal.pas">
+				<Form>frmAgendaPessoal</Form>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.agenda.transferir.pas">
+				<Form>frmTransferirCompromisso</Form>
+			</DCCReference>
+			<DCCReference Include="cadastro.lancamento.protocolo.pas">
+				<Form>frmLancamentoProtocolo</Form>
+			</DCCReference>
+			<DCCReference Include="cadastro.permissao.pas">
+				<Form>frmCadPermissoes</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.permissao.pas">
+				<Form>dmPermissao</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="datamodule.lancamento.item.pas">
+				<Form>dmLancamentoItem</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="cadastro.lancamento.item.pas">
+				<Form>frmLancamentoItem</Form>
+			</DCCReference>
+			<DCCReference Include="datamodule.lancamento.protocolo.pas">
+				<Form>dmLancamentoProtocolo</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="biblioteca.relatorio.base.pas">
+				<Form>frmRelBase</Form>
+			</DCCReference>
+			<DCCReference Include="relatorio.protocolo.pas">
+				<Form>frmRelProtocolo</Form>
+			</DCCReference>
+			<DCCReference Include="cadastro.lancamento.buscapessoa.pas">
+				<Form>frmBuscaPessoa</Form>
+			</DCCReference>
+			<DCCReference Include="controlecontabil.indicadores.consultar.pas">
+				<Form>frmConsultarIndicadores</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">controlecontabil.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">5</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Servisoft</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.5</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">Controle Contábil</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
